@@ -12,7 +12,7 @@ public class Aflevering2Application {
 
     public static void main (String[] args) {
         SpringApplication.run(Aflevering2Application.class, args);
-        // port9000 sat i application properties
+        // port9000 sat i application.properties
         //http://localhost:9000
     }
 

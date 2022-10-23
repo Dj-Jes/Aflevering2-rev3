@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -40,14 +41,14 @@ class GrisController {
                         .andAffordance(afford(methodOn(GrisController.class).newGris(null)))));
     }
 
-    // TODO: 22-10-2022  
+
     @PostMapping("/nyGris")
     ResponseEntity<?> newGris(@RequestBody Gris gris) {
 
         Gris savedGris = repository.save(gris);
 
         return EntityModel.of(savedGris,
-                        linkTo(methodOn(GrisController.class).findAll()).withRel("Grise")).getLink(IanaLinkRelations.SELF)
+                        linkTo(methodOn(GrisController.class).findAll()).withRel("gris")).getLink(IanaLinkRelations.SELF)
                 .map(Link::getHref) //
                 .map(href -> {
                     try {
@@ -70,7 +71,7 @@ class GrisController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // TODO: 22-10-2022
+
     @PutMapping("/opdaterGris/{id}")
     ResponseEntity<?> updateGris(@RequestBody Gris gris, @PathVariable long id) {
 
@@ -102,6 +103,10 @@ class GrisController {
 
         return ResponseEntity.noContent().build();
     }
+
+
+
+
 
   
 }
