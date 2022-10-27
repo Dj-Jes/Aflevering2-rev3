@@ -14,6 +14,11 @@ public class Aflevering2Application {
         SpringApplication.run(Aflevering2Application.class, args);
         // port9000 sat i application.properties
         //http://localhost:9000
+        //Mit navn er Sten
+        //Med det KÆMPE ben
+        // - Jesper
+        // michael er gammel altså, sådan riiiiigtig gammel
+        // - Mikkel
     }
 
 
