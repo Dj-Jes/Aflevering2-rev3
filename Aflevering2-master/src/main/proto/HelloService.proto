@@ -1,0 +1,56 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package dk.via.hello;
+
+/*
+message HelloRequest
+{ string firstName = 1; string lastName = 2; }
+
+message HelloResponse
+{ string greeting = 1; }
+
+
+service HelloService
+{ rpc hello(HelloRequest) returns (HelloResponse);}
+
+ */
+
+message createGris{
+
+  int64 weight = 2;
+  string origin WIP;
+  string date = 4;
+}
+
+message Response{
+  string svar = 1;
+}
+
+message getGris{
+  int32 id = 1;
+}
+//det virker sikkert ikke, spørg mikkel. he TBD
+message Grisse{
+  repeated getALlGris List = 1;
+}
+
+message getALlGris{
+  string getAllGris = 1;
+
+}
+
+
+
+service CreateGrisService{
+  rpc hello(createGris) returns(Response);
+}
+
+
+service GetGrisService{
+  rpc hello(getGris) returns(Response);
+}
+
+
+service getAllGrisService{
+  rpc hello(Grisse) returns(Response);
+}

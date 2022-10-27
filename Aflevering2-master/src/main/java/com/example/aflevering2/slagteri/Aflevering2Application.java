@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.server.core.EvoInflectorLinkRelationProvider;
+import server.HelloServer;
+import server.HelloServiceImpl;
 
 
 @SpringBootApplication
@@ -11,7 +13,7 @@ import org.springframework.hateoas.server.core.EvoInflectorLinkRelationProvider;
 public class Aflevering2Application {
 
     public static void main (String[] args) {
-        SpringApplication.run(Aflevering2Application.class, args);
+        SpringApplication.run(HelloServer.class, args);
         // port9000 sat i application.properties
         //http://localhost:9000
         //Mit navn er Sten

@@ -14,22 +14,20 @@ import javax.persistence.Id;
 public class Gris {
     @Id
     @GeneratedValue
-    private long ID;
-    public int vægt;
-    public String origen;
+    private static long ID;
+    public int weight;
+    public String origin;
     public String date;
 
-    public Gris(int vægt, String origen, String date) {
-        this.vægt = vægt;
-        this.origen = origen;
+    public Gris(int weight, String origin, String date) {
+        this.weight = weight;
+        this.origin = origin;
         this.date = date;
     }
 
-    public Gris() {
+    public Gris() {}
 
-    }
-
-    public long getID() {
+    public static long getID() {
         return ID;
     }
 
@@ -37,20 +35,20 @@ public class Gris {
         this.ID = ID;
     }
 
-    public int getVægt() {
-        return vægt;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setVægt(int vægt) {
-        this.vægt = vægt;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
-    public String getOrigen() {
-        return origen;
+    public String getOrigin() {
+        return origin;
     }
 
-    public void setOrigen(String origen) {
-        this.origen = origen;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
     public String getDate() {
